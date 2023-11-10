@@ -1,0 +1,40 @@
+#addButton {
+  padding: 0.5em;
+  border-radius: 1em;
+  width: 100px;
+  background-color: #28a0eb;
+  color: white;
+  margin: 2em;
+  cursor: pointer;
+  user-select: none;
+}
+
+#task {
+  width: 500px;
+  height: 30px;
+  border-radius: 1em;
+  padding-left: 20px;
+}
+
+.editButton {
+  background-color: #28a0eb;
+  border-radius: 1em;
+  border: none;
+  width: 50px;
+  color: white;
+  float: right;
+  cursor: pointer;
+  user-select: none;
+}
+
+.deleteButton {
+  border: none;
+  color: white;
+  background-color: red;
+  border-radius: 1em;
+  float: right;
+  margin-left: 20px;
+  width: 50px;
+  cursor: pointer;
+  user-select: none;
+}
