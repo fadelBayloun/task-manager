@@ -5,7 +5,14 @@ let input = document.getElementById("task");
 addButton.addEventListener("click", function (e) {
   if (input.value !== "") {
     let li = document.createElement("li");
-    li.innerText = input.value;
+
+    let checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    li.appendChild(checkbox);
+
+    let span = document.createElement("span");
+    span.innerHTML = input.value;
+    li.appendChild(span);
     input.value = "";
 
     let deleteIcon = document.createElement("i");
@@ -32,9 +39,11 @@ addButton.addEventListener("click", function (e) {
         target = e.target.parentElement;
       }
       let newText = prompt("Enter your edited task");
-      if (newText !== "") {
-        target.innerText = newText;
-        console.dir(target);
+      if (newText) {
+        target.innerHTML = "";
+        target.appendChild(checkbox);
+        span.innerHTML = newText;
+        target.appendChild(span);
         target.appendChild(deleteButton);
         target.appendChild(editButton);
       }
@@ -48,7 +57,16 @@ addButton.addEventListener("click", function (e) {
       }
     });
 
+    let checkboxInputElement = li.querySelector("input");
+    checkboxInputElement.addEventListener("change", function (e) {
+      const span = e.target.nextElementSibling;
+      if (e.target.checked) {
+        span.className = "text-transform";
+      } else {
+        span.className = "";
+      }
+    });
+
     list.appendChild(li);
-    document.body.appendChild(li);
   }
 });
