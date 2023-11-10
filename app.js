@@ -15,13 +15,13 @@ addButton.addEventListener("click", function (e) {
     li.appendChild(editButton);
     editButton.addEventListener("click", function (e) {
       let target = e.target.parentElement;
-      target.innerText = prompt();
+      target.innerText = prompt("Enter your edited task");
       target.appendChild(deleteButton);
       target.appendChild(editButton);
     });
-    deleteButton.onclick = (e) => {
+    deleteButton.addEventListener("click", function (e) {
       e.target.parentElement.remove();
-    };
+    });
     list.appendChild(li);
 
     // add the li to the local storage or array thing
