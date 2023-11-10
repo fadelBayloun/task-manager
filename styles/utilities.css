@@ -9,7 +9,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 10%;
+  padding: 5%;
   background-color: black;
   color: white;
   width: 100vw;
@@ -20,6 +20,28 @@ li {
   margin: 0.5em;
   border-bottom: 1px solid grey;
   list-style: none;
-  padding: 10px;
+  padding: 15px;
   width: 100%;
+}
+
+ul {
+  width: 100%;
+}
+
+span {
+  margin-left: 10px;
+  font-size: 1.5em;
+}
+
+input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  accent-color: #28a0eb;
+}
+
+h1 {
+  text-align: center;
+  color: #28a0eb;
+  font-size: 4rem;
+  margin-bottom: 5%;
 }
