@@ -25,17 +25,22 @@ addButton.addEventListener("click", function (e) {
     li.appendChild(editButton);
 
     editButton.addEventListener("click", function (e) {
-      let target = e.target.parentElement;
+      let target;
+      if (e.target.parentElement.classList.contains("editButton")) {
+        target = e.target.parentElement.parentElement;
+      } else {
+        target = e.target.parentElement;
+      }
       let newText = prompt("Enter your edited task");
       if (newText !== "") {
         target.innerText = newText;
+        console.dir(target);
         target.appendChild(deleteButton);
         target.appendChild(editButton);
       }
     });
 
     deleteButton.addEventListener("click", function (e) {
-      console.log(e.target.parentElement);
       if (e.target.parentElement.classList.contains("deleteButton")) {
         e.target.parentElement.parentElement.remove();
       } else {
@@ -44,7 +49,6 @@ addButton.addEventListener("click", function (e) {
     });
 
     list.appendChild(li);
-    // add the li to the local storage or array thing
     document.body.appendChild(li);
   }
 });
