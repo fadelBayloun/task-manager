@@ -3,24 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Task Manager</title>
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/utilities.css" />
+    <script src="app.js" defer></script>
+    <title>Task Manager</title>
   </head>
   <body>
-    <div class="page">
-      <!-- Add Task  -->
-      <div class="add-task">
-        <input type="text" id="task-input" placeholder="Enter a task" />
-        <button id="add-task-button">Add</button>
-      </div>
-      <!-- Display Tasks -->
-      <div class="task-container">
-        <!-- tasks will be listed here -->
-        <ul id="task-list"></ul>
-      </div>
+    <div>
+      <input type="text" placeholder="Enter your task" id="task" />
+      <button id="addButton">add</button>
     </div>
 
-    <script src="app.js"></script>
+    <ul></ul>
   </body>
 </html>
